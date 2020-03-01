@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<body bgcolor="#E6E6FA">
+</head>
+</style>
+</html >
+
+<html >
+<head>
+  <meta charset="UTF-8">
+   <h1 align="Center">FTP - FILE TRANSFER BETWEEN SERVERS</h1>
+   <h2 align="center">SOURCE DETAILS</h2> 
+ <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+       
+<body>
+<form action="{{ url_for('predict')}}" method="post" role="form">
+<div class="form-group">
+<label for="cars">TYPE</label>
+  <select id="cars" name="cars">
+   <option value="volvo"> </option>
+    <option value="volvo">DESKTOP</option>
+    <option value="saab">HDFS</option>
+    <option value="fiat">UNIX</option>
+  </select>
+      <label for="NID">NID:</label>
+	  
+<input type="text" class="form-control" id="NID" name="NID" size="8" placeholder="Enter a NID:">
+
+<label for="USERNAME">USERNAME:</label>
+<input type="text" class="form-control" id="USERNAME" name="USERNAME" size="12" placeholder="Enter a username:">
+
+<label for="password">Password:</label>
+<input type="password" class="form-control" id="password" name="password" size="12" placeholder="Enter a password.">
+<label for="w3mission">Files:</label>
+
+<textarea name="message1" rows="4" cols="70">
+</textarea>
+
+<h2 align="center">TARGET DETAILS</h2> 
+
+<label for="cars">TYPE</label>
+  <select id="cars" name="cars">
+   <option value="volvo"> </option>
+    <option value="volvo">DESKTOP</option>
+    <option value="saab">HDFS</option>
+    <option value="fiat">UNIX</option>
+  </select>
+      <label for="NID">NID:</label>
+	  
+<input type="text" class="form-control" id="NID" name="NID1" size="8" placeholder="Enter a NID:">
+
+<label for="USERNAME">USERNAME:</label>
+<input type="text" class="form-control" id="USERNAME" name="USERNAME1" size="12" placeholder="Enter a username:">
+
+<label for="password">Password:</label>
+<input type="password" class="form-control" id="password" name="password1"  size="12" placeholder="Enter a password.">
+<label for="w3mission">Files:</label>
+<textarea name="message" rows="4" cols="70">
+</textarea>
+<br><br>
+<br><br>
+</div>
+<input class="btn btn-lg btn-primary" type="submit" name="create_draft" value="Create Draft">
+<input class="btn btn-lg btn-primary" type="submit" name="create_post" value="Create Post">
+</form>   
+
+     <p>{{ prediction_text }}</p>
+
+ </div>
+ </body>
+
+</html>
+
